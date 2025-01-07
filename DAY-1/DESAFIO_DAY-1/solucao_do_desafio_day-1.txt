@@ -1,0 +1,16 @@
+#### Desafio Day 1 ####
+1 - Criar um cluster kubernetes utilizando o KIND;
+    1.1 - Sendo 1 control-plane e 3 workers;
+2 - Realizar deploy pod através do arquivo "meu-primeiro-pod.yaml";
+
+#### Solução ####
+1 - Criar o arquivo "meu-primeiro-cluster.yaml" para criação do cluster via KIND;
+    1.1 - Sendo 1 control-plane e 3 workers;
+2 - Realizar deploy do arquivo;
+    2.1 - Comando utilizado para criação do cluster: sudo kind create cluster --config meu-primeiro-cluster.yaml;
+3 - Visualizar o cluster utilizando o KIND: sudo kind get clusters
+4 - Listar os nodes do cluster e validar se estão em execução utilizando o KUBECTL: sudo kubectl get nodes
+5 - Criar o arquivo "meu-primeiro-pod.yaml" para criação do pod com o nginx;
+6 - Realizar deploy do arquivo;
+    6.1 - Comando utilizado para criação do pod: sudo kubectl apply -f meu-primeiro-pod.yaml
+7 - Listar os pods e validar se estão em execução: sudo kubectl get pods
